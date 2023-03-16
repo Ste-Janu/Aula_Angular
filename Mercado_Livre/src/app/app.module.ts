@@ -7,11 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MercadoLivreComponent } from './pages/mercado-livre/mercado-livre.component';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+// import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MercadoLivreComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -19,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
+    // MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

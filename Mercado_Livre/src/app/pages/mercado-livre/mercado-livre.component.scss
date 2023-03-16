@@ -4,15 +4,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 8rem;
+    height: 7rem;
 
     .cima {
         flex-direction: row;
         display: flex;
         gap: 20px;
-        // margin-top: 5px;
+        margin-top: 22px;
         align-items: center;
         text-align: center;
+        height: 30px;
 
         .logo-ml {
             width: 100px;
@@ -55,7 +56,7 @@
         .ofertas {
             color: black;
             display: flex;
-
+            margin-left: 200px;
             align-items: center;
 
             i {
@@ -73,12 +74,17 @@
 
     .header-baixo {
         color: rgb(85, 85, 85);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
 
         .baixo-esquerda {
             display: flex;
             flex-direction: row;
             font-size: 13px;
             width: 10px;
+            margin-bottom: 15px;
 
 
             .material-symbols-outlined {
@@ -89,6 +95,37 @@
                 display: flex;
                 flex-direction: column;
             }
+        }
+
+        .baixo-meio{
+            margin-left: 10rem;
+            font-size: 13px;
+            display: flex;
+            gap: 16px;
+            margin-top: 23px;
+        }
+
+        .baixo-direita{
+            font-size: 13px;
+            margin-left: 100px;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            margin-top: 33px;
+
+            .palavras{
+                display: flex;
+                gap: 20px;
+            }
+
+            .icones{
+                margin-left: 5px;
+
+                span{
+                    margin-left: 5px;
+                }
+            }
+            
         }
     }
 
