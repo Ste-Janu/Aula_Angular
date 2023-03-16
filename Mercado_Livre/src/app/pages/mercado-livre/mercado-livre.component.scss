@@ -17,6 +17,7 @@
 
         .logo-ml {
             width: 100px;
+            margin-left: 50px;
         }
 
         .pesquisa {
@@ -32,9 +33,10 @@
 
         .div-pesquisa {
             background-color: #fff;
-            width: 400px;
+            width: 600px;
             height: 40px;
             display: flex;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
             align-items: center;
             justify-content: space-around;
             gap: 10px;
@@ -56,7 +58,7 @@
         .ofertas {
             color: black;
             display: flex;
-            margin-left: 200px;
+            margin-left: 100px;
             align-items: center;
 
             i {
@@ -130,3 +132,144 @@
     }
 
 }
+
+
+.caixa-esquerda {
+    width: 100%;
+    // height: calc(100% - 7rem);
+    background-color: rgb(237, 237, 237);
+    
+
+    mat-drawer{
+        background-color: rgb(245, 245, 245);
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+        // height: 100vh;
+        width: 200px;
+        color: rgb(140, 140, 140);
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    ul li:first-child{
+        margin-top: 25px;
+        margin-bottom: 35px;
+        font-size: 16px;
+    }
+    ul li{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .sidebar{
+        padding-left: 1rem;
+    }
+}
+
+mat-card{
+    background-color: transparent;
+    width: 604px;
+      
+}
+
+mat-drawer-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: rgb(140, 140, 140);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.card-cima{
+    background-color: rgb(255, 255, 255); 
+    width: 604px;
+    height: 92px;    
+    border-radius: 10px;   
+
+    .perfil{
+        display: flex;
+        align-items: center;
+        
+        mat-icon{
+            font-size: 30px;
+            width: 70px;
+            height: 30px;
+            
+        }
+        .nivel{
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;  
+            margin-left: 10px;     
+
+            .nome{
+                color:rgba(0,0,0,.9);
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+
+.card-baixo{
+    
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);    
+    width: 604px;   
+    padding-bottom: 3rem;
+    border-radius: 10px;  
+    mat-icon{
+        font-size: 25px;
+    }
+    
+    ul {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .linha{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        cursor: pointer;
+        justify-content: center;
+        height: 10px;
+        margin-bottom: - 8px;
+
+        .coisas-lado{
+            width: 85%;
+            display: flex;
+            flex-direction: row;
+            margin-left: 20px;
+            justify-content: space-between ;
+        }
+        
+        .frase-de-cima{
+            color:rgba(0,0,0,.9);
+            font-size: 18px;
+            display: flex;
+            justify-content: baseline; 
+        }
+    }
+
+    .divider{
+        display: flex;
+        justify-content: center;
+    }
+    mat-divider{
+        background-color: rgb(165, 165, 165);
+        ;
+        width: 90%;
+    }
+}
+

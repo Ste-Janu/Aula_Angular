@@ -1,59 +1,277 @@
 <body>
-  
+  <header>
+    <mat-toolbar class="header-menu">
+      <div class="cima">
+        <div>
+          <a
+            ><img src="../../../assets/logo-ml.png" alt="" class="logo-ml"
+          /></a>
+        </div>
+        <div class="div-pesquisa">
+          <input
+            class="pesquisa"
+            type="text"
+            placeholder="Buscar produtos, marcas e muito mais…"
+          />
+          <button class="lupa">
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="ofertas">
+          <i class="fa-sharp fa-solid fa-tag"></i>
+          <p>Ofertas por tempo limitado</p>
+        </div>
+      </div>
 
-<header>
-  <mat-toolbar class="header-menu">
-    <div class="cima">
-    <div>
-      <a><img src="../../../assets/logo-ml.png" alt="" class="logo-ml" /></a>
-    </div>
-    <div class="div-pesquisa" >
-        <input class="pesquisa" type="text" placeholder="Buscar produtos, marcas e muito mais…" >
-        <button class="lupa" ><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
-    </div>
-    <div class="ofertas">
-        <i class="fa-sharp fa-solid fa-tag"></i>
-        <p>Ofertas por tempo limitado</p>
-    </div>
+      <div class="header-baixo">
+        <div class="baixo-esquerda">
+          <span class="material-symbols-outlined">location_on</span>
+          <div class="local">
+            <span>Informe seu</span>
+            <span>CEP</span>
+          </div>
+        </div>
+        <div class="baixo-meio">
+          <span>Categorias</span>
+          <span>Ofertas do dia</span>
+          <span>Histórico</span>
+          <span>Supermercado</span>
+          <span>Moda</span>
+          <span>Vender</span>
+          <span>Contato</span>
+        </div>
+        <div class="baixo-direita">
+          <div class="palavras">
+            <p>Crie sua conta</p>
+            <p>Compras</p>
+            <p>Favoritos</p>
+          </div>
+          <div class="icones">
+            <span class="material-symbols-outlined">notifications</span>
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </div>
+        </div>
+      </div>
+    </mat-toolbar>
+  </header>
+
+  <div>
+    <mat-drawer-container class="caixa-esquerda">
+      <mat-drawer mode="side" opened>
+        <ul class="sidebar">
+          <li><mat-icon >menu</mat-icon>Minha Conta</li>
+          <li><mat-icon >shopping_bag</mat-icon>Compras</li>
+          <li><mat-icon >sell</mat-icon>Vendas</li>
+          <li><mat-icon >storefront</mat-icon>Mercado Shops</li>
+          <li><mat-icon >video_library</mat-icon>Video e música</li>
+          <li><mat-icon >receipt_long</mat-icon>Faturamento</li>
+          <li><mat-icon >account_circle</mat-icon>Meu perfil</li>
+          <li><mat-icon >settings</mat-icon>Configurações</li>
+        </ul>
+      </mat-drawer>
+
+      <mat-drawer-content class="card-cont">
+        <mat-card>
+          <mat-card-actions class="card-cima">
+            <div class="perfil">
+              <mat-icon>account_circle</mat-icon>
+              <div class="nivel">
+                <span class="nome">Stefani Januario</span>
+                <span>Nivel 3 - Mercado Pontos</span>
+              </div>
+            </div>
+          </mat-card-actions>
+        </mat-card>
+        <br>
+        <mat-card>
+          <mat-card-actions class="card-baixo">
+            <ul>
+              <li>
+                <div class="linha">
+
+                  <mat-icon >account_circle</mat-icon>
+
+                  <div class="coisas-lado">
+
+                    <div class="frases">
+                      <span class="frase-de-cima">Meus Dados</span>
+                      <span>Gerencie seus dados pessoais.</span>
+                    </div>
+
+                    <div>        
+                    <mat-icon class="seta">chevron_right</mat-icon>
+                  </div>
+
+                </div>
+
+              </div>
+              </li>
+              <div class="divider">
+                <mat-divider></mat-divider>
+              </div>
+            </ul>
+
+            <ul>
+              <li>
+                <div class="linha">
+
+                  <mat-icon >lock</mat-icon>
+
+                  <div class="coisas-lado">
+
+                    <div class="frases">
+                      <span class="frase-de-cima">Segurança</span>
+                      <span>Você tem configurações pendentes.</span>
+                    </div>
+
+                    <div>        
+                    <mat-icon class="seta">chevron_right</mat-icon>
+                  </div>
+
+                </div>
+
+              </div>
+              </li>
+              <div class="divider">
+                <mat-divider></mat-divider>
+              </div>
+            </ul>
+
+            <ul>
+              <li>
+                <div class="linha">
+
+                  <mat-icon >credit_card</mat-icon>
+
+                  <div class="coisas-lado">
+
+                    <div class="frases">
+                      <span class="frase-de-cima">Meus cartões</span>
+                      <span>Gerencie seus catões.</span>
+                    </div>
+
+                    <div>        
+                    <mat-icon class="seta">chevron_right</mat-icon>
+                  </div>
+
+                </div>
+
+              </div>
+              </li>
+              <div class="divider">
+                <mat-divider></mat-divider>
+              </div>
+            </ul>
+
+            <ul>
+              <li>
+                <div class="linha">
+
+                  <mat-icon >location_on</mat-icon>
+
+                  <div class="coisas-lado">
+
+                    <div class="frases">
+                      <span class="frase-de-cima">Endereços</span>
+                      <span>Altere seus endereços ou adicione outro.</span>
+                    </div>
+
+                    <div>        
+                    <mat-icon class="seta">chevron_right</mat-icon>
+                  </div>
+
+                </div>
+
+              </div>
+              </li>
+              <div class="divider">
+                <mat-divider></mat-divider>
+              </div>
+            </ul>
+
+            <ul>
+              <li>
+                <div class="linha">
+
+                  <mat-icon >admin_panel_settings</mat-icon>
+
+                  <div class="coisas-lado">
+
+                    <div class="frases">
+                      <span class="frase-de-cima">Privacidade</span>
+                      <span>Gerencie o uso de suas informações pessoais.</span>
+                    </div>
+
+                    <div>        
+                    <mat-icon class="seta">chevron_right</mat-icon>
+                  </div>
+
+                </div>
+
+              </div>
+              </li>
+              <div class="divider">
+                <mat-divider></mat-divider>
+              </div>
+            </ul>
+
+            <ul>
+              <li>
+                <div class="linha">
+
+                  <mat-icon >chat_bubble</mat-icon>
+
+                  <div class="coisas-lado">
+
+                    <div class="frases">
+                      <span class="frase-de-cima">Comunicações</span>
+                      <span>Escolha que tipo de informação você quer receber.</span>
+                    </div>
+
+                    <div>        
+                    <mat-icon class="seta">chevron_right</mat-icon>
+                  </div>
+
+                </div>
+
+              </div>
+              </li>
+              <div class="divider">
+                <mat-divider></mat-divider>
+              </div>
+            </ul>
+
+            <ul>
+              <li>
+                <div class="linha">
+
+                  <mat-icon >monetization_on</mat-icon>
+
+                  <div class="coisas-lado">
+
+                    <div class="frases">
+                      <span class="frase-de-cima">Assinaturas</span>
+                      <span>Gerencie suas assinaturas.</span>
+                    </div>
+
+                    <div>        
+                    <mat-icon class="seta">chevron_right</mat-icon>
+                  </div>
+
+                </div>
+
+              </div>
+              </li>
+              <div class="divider">
+                <mat-divider></mat-divider>
+              </div>
+            </ul>
+
+          </mat-card-actions>
+        </mat-card>
+      </mat-drawer-content>
+    </mat-drawer-container>
   </div>
-
-    <div class="header-baixo">
-      <div class="baixo-esquerda">
-        <span class="material-symbols-outlined">location_on</span>
-        <div class="local">
-          <span>Informe seu</span>
-          <span>CEP</span>  
-        </div>
-      </div>
-      <div class="baixo-meio">
-        <span>Categorias</span>
-        <span>Ofertas do dia</span>
-        <span>Histórico</span>
-        <span>Supermercado</span>
-        <span>Moda</span>
-        <span>Vender</span>
-        <span>Contato</span>
-      </div>
-      <div class="baixo-direita">
-        <div class="palavras">
-          <p>Crie sua conta</p>
-          <p>Compras</p>
-          <p>Favoritos</p>  
-        </div>
-        <div class="icones">
-          <span class="material-symbols-outlined">notifications</span>
-          <span class="material-symbols-outlined">shopping_cart</span>
-        </div>
-      </div>  
-    </div>
-  </mat-toolbar>
-</header>
-
-
-  <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened>Drawer content</mat-drawer>
-    <mat-drawer-content>Main content</mat-drawer-content>
-  </mat-drawer-container>
-
-
+    
+    
 </body>

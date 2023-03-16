@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { MatSidenavModule } from '@angular/material/sidenav'
+import { MatSidenavModule, } from '@angular/material/sidenav'
 import { MercadoLivreComponent } from './mercado-livre/mercado-livre.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { MercadoLivreComponent } from './mercado-livre/mercado-livre.component';
     CommonModule,
     MatToolbarModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCardModule,
+    MatDividerModule,
   ]
 })
 export class PagesModule { }
