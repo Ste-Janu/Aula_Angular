@@ -1,0 +1,76 @@
+<body>
+
+    <header>
+        <h1>Cadastro de Pacientes</h1>
+    </header>
+
+  <mat-drawer-container>
+    <mat-form-field appearance="fill">
+      
+      <input matInput id="nome" [(ngModel)]="paciente.nome" placeholder="insira seu nome" />
+    </mat-form-field>
+  
+
+  
+    <mat-form-field appearance="fill">
+      
+      <input matInput id="nome" [(ngModel)]="paciente.sobrenome" placeholder="insira seu sobrenome" />
+    </mat-form-field>
+  
+
+  
+  <mat-form-field appearance="fill">
+    
+    <input matInput id="idade" [(ngModel)]="paciente.idade" placeholder="insira sua idade"/>
+  </mat-form-field>
+
+
+
+  <div *ngFor="let dependente of paciente.dependentes">
+
+    <p>Cadatro dependentes</p>
+    
+    <mat-form-field appearance="fill">
+      <mat-label class="nomeDependente">Nome</mat-label>
+      <input matInput id="nomeDependente" [(ngModel)]="dependente.nome" />
+    </mat-form-field>
+    
+
+    
+    <mat-form-field appearance="fill">
+      <mat-label class="idadeDependente">Sobrenome</mat-label>
+      <input matInput id="idadeDependente" [(ngModel)]="dependente.sobrenome" />
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill">
+      <mat-label class="idadeDependente">Idade</mat-label>
+      <input matInput id="idadeDependente" [(ngModel)]="dependente.idade" />
+    </mat-form-field>
+  </div>
+
+  <button (click)="salvarPaciente()">Registrar paciente</button>
+  <button (click)="salvarDependente()">Adicionar dependente</button>
+
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let paciente of pacientes">
+      <mat-expansion-panel-header>
+        <mat-panel-title>Nome: {{ paciente.nome }}</mat-panel-title>
+        <mat-panel-description
+          >Sobrenome {{ paciente.sobrenome }}</mat-panel-description
+        >
+        <mat-panel-description
+          >Idade: {{ paciente.idade }}</mat-panel-description
+        >
+      </mat-expansion-panel-header>
+      <p>Dependentes:</p>
+      <br />
+      <li *ngFor="let dependente of paciente.dependentes">
+        Nome: {{ dependente.nome }}, Sobrenome: {{ dependente.sobrenome }},
+        Idade: {{ dependente.idade }}
+      </li>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+</mat-drawer-container>
+</body>
