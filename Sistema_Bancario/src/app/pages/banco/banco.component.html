@@ -1,0 +1,40 @@
+<h3>Cadastro bancário</h3>
+
+<mat-form-field appearance="fill">
+    <input matInput id="nome" [(ngModel)]="usuario.nome" placeholder="insira seu nome" />
+</mat-form-field>
+
+
+
+<mat-form-field appearance="fill">
+    <input matInput id="sobrenome" [(ngModel)]="usuario.sobrenome" placeholder="insira seu sobrenome" />
+</mat-form-field>
+
+
+
+<mat-form-field appearance="fill">
+    <input matInput id="saldoBancario" [(ngModel)]="usuario.saldoBancario" placeholder="insira seu saldo" />
+</mat-form-field>
+
+<button (click)="salvarUsuario()">Registrar usuario</button>
+
+
+<div>
+    <span>Lista de usuarios</span>
+    
+    <li *ngFor="let usuario of usuarios2" [ngClass]="{'negativo': usuario.saldoBancario <= 0, 'positivo': usuario.saldoBancario > 0, 'alto': usuario.saldoBancario > 1000000}">
+        Nome: {{ usuario.nome }}, Sobrenome: {{ usuario.sobrenome }}, Saldo bancário: {{ usuario.saldoBancario }}
+    </li>
+
+</div>
+
+<!-- <tbody>
+    <tr *ngFor="let user of usuarios2" [ngClass]="{'negativo': user.saldoBancario < 0, 'positivo': user.saldoBancario > 0, 'alto': user.saldoBancario > 100000}">
+      <td>{{ user.nome }}</td>
+      <td>{{ user.saldoBancario | currency: "BRL"}}</td>
+      <td>
+        <button (click)="editUser(user)">Edit</button>
+        <button (click)="removeUser(user)">Remove</button>
+      </td>
+    </tr>
+  </tbody> -->
