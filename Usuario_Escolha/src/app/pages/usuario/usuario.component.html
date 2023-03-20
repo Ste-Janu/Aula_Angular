@@ -1,0 +1,47 @@
+<mat-stepper orientation="horizontal">
+    <mat-step>
+      <ng-template matStepLabel>Cor da fonte</ng-template>
+      <ng-template matStepContent>
+        <input matInput type="color" [(ngModel)]="fontColor" (change)="updateColors()">
+        <button mat-button matStepperNext>Next</button>
+      </ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Tamanho da fonte</ng-template>
+      <ng-template matStepContent>
+        <input matInput type="number" [(ngModel)]="fontSize" (change)="updateColors()">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Margem</ng-template>
+      <input matInput type="number" [(ngModel)]="margin" (change)="updateColors()">
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Padding</ng-template>
+        <input matInput type="number" [(ngModel)]="padding" (change)="updateColors()">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Cor de fundo 1ª</ng-template>
+        <input matInput type="color"  [(ngModel)]="primaryColor" (change)="updateColors()">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Cor de fundo 2ª</ng-template>
+        <input matInput type="color"  [(ngModel)]="secondaryColor" (change)="updateColors()">
+        <button mat-button matStepperPrevious>Back</button>
+      </mat-step>
+</mat-stepper>
+
+<main>
+    <p>Hello world</p>
+<h1>
+    hello world
+</h1>
+</main>
