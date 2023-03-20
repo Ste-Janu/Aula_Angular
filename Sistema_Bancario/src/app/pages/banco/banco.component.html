@@ -24,9 +24,22 @@
     
     <li *ngFor="let usuario of usuarios2" [ngClass]="{'negativo': usuario.saldoBancario <= 0, 'positivo': usuario.saldoBancario > 0, 'alto': usuario.saldoBancario > 1000000}">
         Nome: {{ usuario.nome }}, Sobrenome: {{ usuario.sobrenome }}, Saldo bancário: {{ usuario.saldoBancario }}
+        <button (click)="editarUsuario(usuario)">Editar</button>
+        <button (click)="deletarUsuario(usuario)">Deletar</button>
     </li>
+    
+</div><div *ngIf="editMode">
+    <h3>Edit User</h3>
+    <form (ngSubmit)="updateUser()">
+      <input type="text" name="name" [(ngModel)]="selectedUser.nome">
+      <input type="text" name="sobrenome" [(ngModel)]="selectedUser.sobrenome">
+      <input type="number" name="balance" [(ngModel)]="selectedUser.saldoBancario">
+      <button type="submit">Salvar</button>
+    </form>
+  </div>
 
-</div>
+
+
 
 <!-- <tbody>
     <tr *ngFor="let user of usuarios2" [ngClass]="{'negativo': user.saldoBancario < 0, 'positivo': user.saldoBancario > 0, 'alto': user.saldoBancario > 100000}">

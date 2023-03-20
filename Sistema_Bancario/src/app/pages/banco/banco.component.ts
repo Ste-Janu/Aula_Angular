@@ -14,6 +14,14 @@ export class BancoComponent {
     saldoBancario: 0,
   }
 
+  selectedUser: Usuarios = {
+    nome: '',
+    sobrenome:'',
+    saldoBancario: 0,
+  };
+  
+  editMode = false;
+
   usuarios2: Usuarios[] = []
 
   salvarUsuario(){
@@ -23,9 +31,30 @@ export class BancoComponent {
       sobrenome: '',
       saldoBancario: 0,
     };
-
-    
   }
+
+  editarUsuario(usuario: Usuarios) {
+    this.selectedUser = { ...usuario };
+    this.editMode = true;
+  }
+
+
+  updateUser() {
+    const index = this.usuarios2.findIndex(u => u.nome === this.selectedUser.nome);
+    this.usuarios2[index] = this.selectedUser;
+    this.selectedUser = {
+      nome: '',
+      sobrenome: '',
+      saldoBancario: 0,      
+    };
+    this.editMode = false;
+  }
+
+  deletarUsuario(usuario: Usuarios) {
+    const index = this.usuarios2.findIndex(u => u.nome === usuario.nome);
+    this.usuarios2.splice(index, 1);
+  }
+  
 }
 
 
